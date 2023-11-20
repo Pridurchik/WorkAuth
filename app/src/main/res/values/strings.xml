@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">WorkAuth</string>
+
+    <string name="auth">Авторизация</string>
+    <string name="enter">Войти</string>
+    <string name="give_code">Получить код</string>
+    <string name="enter_number_phone">Введите номер телефона</string>
+    <string name="number_phone">Номер телефона</string>
+    <string name="do_regist">Зарегистрироваться</string>
+
+    <string name="sms_send_by_text">
+        <font color="#343944">СМС–код отправлен на номер</font>
+    </string>
+
+    <string name="sms_send_by_number_phone_total">
+        @string/sms_send_by_text
+    </string>
+
+    <string name="regist">
+        Регистрация
+    </string>
+
+    <string name="namee">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="lastname">Отчество</string>
+    <string name="neceserly">Обязательно</string>
+</resources>

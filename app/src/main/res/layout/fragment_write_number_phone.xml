@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/writeNumberPhoneFragment"
+    tools:context=".presentation.auth.fragment.WriteNumberPhoneFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/authID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auth"
+
+            android:textColor="@color/default_text_color"
+            android:layout_gravity="center"
+            android:fontFamily="@font/semibold"
+            android:textSize="19dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/ug_svet_PassNumberPhone_imgID"
+        android:layout_width="135dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ug_svet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enterButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shapes_default"
+        android:fontFamily="@font/sfpro"
+        android:text="@string/give_code"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="59dp"
+        android:layout_marginRight="57dp"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolBarID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputNumberPhoneTextInputLayoutID" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNumberPhoneTextInputLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="13dp"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Number_Phone_Txt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputNumberPhoneTextInputID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_shape"
+            android:digits="+1234567890"
+            android:fontFamily="@font/inter_low"
+            android:lines="1"
+            android:layout_weight="1"
+            android:maxLength="18"
+            android:layout_gravity="bottom"
+            android:text="+7"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/Enter_Number_Phone_Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/sfpro"
+        android:text="@string/enter_number_phone"
+        android:textColor="#343944"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBarID" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

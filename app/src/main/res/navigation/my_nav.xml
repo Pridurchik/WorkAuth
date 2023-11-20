@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/passNumberSmsFragment">
+
+
+    <objectAnimator
+        android:propertyName="translationX"
+        android:valueFrom="100%"
+        android:valueTo="0"
+        android:duration="500"/>
+
+    <fragment
+        android:id="@+id/passNumberSmsFragment"
+        android:name="com.example.workauth.presentation.auth.fragment.PassNumberSmsFragment"
+        android:label="fragment_pass_number_sms"
+        tools:layout="@layout/fragment_pass_number_sms" >
+        <action
+            android:id="@+id/action_passNumberSmsFragment_to_passNameAndSurnameFragment"
+            app:destination="@id/passNameAndSurnameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/writeNumberPhoneFragment"
+        android:name="com.example.workauth.presentation.auth.fragment.WriteNumberPhoneFragment"
+        android:label="fragment_write_number_phone"
+        tools:layout="@layout/fragment_write_number_phone" >
+        <action
+            android:id="@+id/action_writeNumberPhoneFragment_to_passNumberSmsFragment"
+            app:destination="@id/passNumberSmsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/passNameAndSurnameFragment"
+        android:name="com.example.workauth.presentation.auth.fragment.PassNameAndSurnameFragment"
+        android:label="fragment_pass_name_and_surname"
+        tools:layout="@layout/fragment_pass_name_and_surname" />
+</navigation>

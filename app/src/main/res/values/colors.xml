@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="not_action_color_but">#D6D7DA</color>
+    <color name="action_color_but">#F37820</color>
+    <color name="default_text_color">#343944</color>
+    <color name="text_in_name_and_surname">#85888F</color>
+
+    <color name="green">#7EAC5D</color>
+    <color name="green_light">#D8E6CE</color>
+    <color name="green_light_2">#F5F9F2</color>
+    <color name="red">#E65D5B</color>
+    <color name="orange">#F2AC4A</color>
+    <color name="dark">#343944</color>
+    <color name="gray">#85888F</color>
+    <color name="light_gray">#D6D7DA</color>
+    <color name="light_gray_ECECEC">#ECECEC</color>
+    <color name="light">#F5F5F6</color>
+    <color name="yellow">#ECAF5A</color>
+
+
+</resources>

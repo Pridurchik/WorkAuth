@@ -1,0 +1,123 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/passNameAndSurnameFragment"
+    tools:context=".presentation.auth.fragment.PassNumberSmsFragment"
+    android:windowSoftInputMode="stateVisible"
+    android:background="#F5F5F6">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/authID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/default_text_color"
+            android:fontFamily="@font/semibold"
+            android:text="@string/auth"
+            android:textSize="50px" />
+
+
+        <ImageButton
+            android:id="@+id/come_back_buttonID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/come_back_img"
+            android:background="@color/white"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text_sms_sendID"
+        android:layout_width="237dp"
+        android:layout_height="50dp"
+        android:text="@string/sms_send_by_text"
+        android:lineSpacingExtra="3sp"
+        android:textSize="17dp"
+        android:translationY="-1.52sp"
+        android:gravity="top"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/inter"
+        app:layout_constraintBottom_toTopOf="@+id/textInputEditText3"
+        app:layout_constraintEnd_toEndOf="@+id/textInputEditText4"
+        app:layout_constraintHorizontal_bias="0."
+        app:layout_constraintStart_toStartOf="@+id/textInputEditText1" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:background="@drawable/button_in_sms_code"
+        android:maxLength="1"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/inter_low"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_in_sms_code"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/inter_low"
+        android:maxLength="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:background="@drawable/button_in_sms_code"
+        android:inputType="number"
+        android:fontFamily="@font/inter_low"
+        android:textAlignment="center"
+        android:maxLength="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/button_in_sms_code"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:fontFamily="@font/inter_low"
+        android:textAlignment="center"
+        android:maxLength="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputEditText3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
