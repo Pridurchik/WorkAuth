@@ -25,8 +25,8 @@ class PassNameAndSurnameFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?, ): View?
-    {
+        savedInstanceState: Bundle?,
+    ): View? {
         _binding = FragmentPassNameAndSurnameBinding.inflate(inflater, container, false)
         _preference = AppPreference(requireContext())
         setUp()
@@ -35,10 +35,11 @@ class PassNameAndSurnameFragment : Fragment() {
         return binding.root
     }
 
-    private fun setUp() = with(binding){
+    private fun setUp() { with(binding)
+    {
         numberPhoneID.text = preference.getNumber()
 
-        inputNameEditText.addTextChangedListener(object : TextWatcher{
+        inputNameEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
 
@@ -46,20 +47,22 @@ class PassNameAndSurnameFragment : Fragment() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                if (inputNameEditText.text?.length!! > 0 &&
-                    inputSurnameEditText.text?.length!! > 0 &&
-                    inputLastnameEditText.text?.length!! > 0) {
+                val name = inputNameEditText.text?.length
+                val surname = inputSurnameEditText.text?.length
+                val lastname = inputLastnameEditText.text?.length
+                when {
+                    name != null && surname != null && lastname != null && name > 0 && surname > 0 && lastname > 0 -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
+                    }
 
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
-                } else {
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))                }
-
+                    else -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))
+                    }
+                }
             }
         })
 
-
-
-        inputSurnameEditText.addTextChangedListener(object : TextWatcher{
+        inputSurnameEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
 
@@ -67,19 +70,22 @@ class PassNameAndSurnameFragment : Fragment() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                if (inputNameEditText.text?.length!! > 0 &&
-                    inputSurnameEditText.text?.length!! > 0 &&
-                    inputLastnameEditText.text?.length!! > 0) {
+                val name = inputNameEditText.text?.length
+                val surname = inputSurnameEditText.text?.length
+                val lastname = inputLastnameEditText.text?.length
+                when {
+                    name != null && surname != null && lastname != null && name > 0 && surname > 0 && lastname > 0 -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
+                    }
 
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
-                } else {
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))                }
-
+                    else -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))
+                    }
+                }
             }
         })
 
-
-        inputLastnameEditText.addTextChangedListener(object : TextWatcher{
+        inputLastnameEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
             }
 
@@ -87,31 +93,45 @@ class PassNameAndSurnameFragment : Fragment() {
             }
 
             override fun afterTextChanged(s: Editable?) {
-                if (inputNameEditText.text?.length!! > 0 &&
-                    inputSurnameEditText.text?.length!! > 0 &&
-                    inputLastnameEditText.text?.length!! > 0) {
+                val name = inputNameEditText.text?.length
+                val surname = inputSurnameEditText.text?.length
+                val lastname = inputLastnameEditText.text?.length
+                when {
+                    name != null && surname != null && lastname != null && name > 0 && surname > 0 && lastname > 0 -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
+                    }
 
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_action))
-                } else {
-                    enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))                }
-
+                    else -> {
+                        enterButton.setBackgroundDrawable(resources.getDrawable(R.drawable.shapes_default))
+                    }
+                }
             }
         })
-
 
         enterButton.setOnClickListener {
-            if (inputNameEditText.text?.length == 0) {
-                neceserlyName.setTextColor(Color.RED)
-            }
-            if (inputSurnameEditText.text?.length == 0) {
-                neceserlySurname.setTextColor(Color.RED)
-            }
-            if (inputLastnameEditText.text?.length == 0) {
-                neceserlyLastname.setTextColor(Color.RED)
+            val name = inputNameEditText.text?.length
+            val surname = inputSurnameEditText.text?.length
+            val lastname = inputLastnameEditText.text?.length
+            when {
+                name == 0 -> {
+                    neceserlyName.setTextColor(Color.RED)
+                }
+
+                surname == 0 -> {
+                    neceserlySurname.setTextColor(Color.RED)
+                }
+
+                lastname == 0 -> {
+                    neceserlyLastname.setTextColor(Color.RED)
+                }
+
+                else -> {
+
+                }
             }
         }
-
     }
+}
 
     companion object {
         @JvmStatic
